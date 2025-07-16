@@ -15,7 +15,7 @@ def index():
 def video():
     return render_template('video.html')
 
-
+<!--
 @app.route('/video_chunk')
 def video_chunk():
     def generate():
@@ -26,6 +26,7 @@ def video_chunk():
                 time.sleep(1)
                 chunk = f.read(1024 * 1024)
     return Response(generate(), mimetype='video/mp4')
+-->
 
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():
