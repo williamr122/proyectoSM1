@@ -1,0 +1,1 @@
+{'preg1': 'Si', 'preg2': '3', 'preg3': '4', 'preg4': 'Nunca', 'preg5': 'Sí, pero leve', 'preg6': '5', 'preg7': 'Wi-Fi'}

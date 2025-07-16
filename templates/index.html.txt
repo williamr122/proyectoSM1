@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Multimedia QoE/QoS</title>
+</head>
+<body>
+    <h1>🎥 Servidor Multimedia QoE/QoS</h1>
+    <p>Elige una de las siguientes opciones:</p>
+
+    <ul>
+        <li><a href="/video">📺 Ver el video</a></li>
+        <li><a href="/survey">📝 Responder encuesta QoE</a></li>
+        <li><a href="/metrics">📊 Ver métricas y gráfico</a></li>
+        <li><a href="/video_chunk">📼 Ver video por fragmentos (chunked)</a></li>
+    </ul>
+</body>
+</html>

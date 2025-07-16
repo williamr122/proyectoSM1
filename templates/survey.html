@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta QoE Completa</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Encuesta de Calidad de Experiencia (QoE)</h2>
+    <form method="post">
+        <p>1. ¿Pudo ver el video sin interrupciones ni pausas prolongadas?</p>
+        <label><input type="radio" name="preg1" value="Si" required> Sí</label><br>
+        <label><input type="radio" name="preg1" value="No"> No</label><br><br>
+
+        <p>2. ¿Cómo calificaría la calidad de la imagen? (MOS)</p>
+        <input type="number" name="preg2" min="1" max="5" required><br><br>
+
+        <p>3. ¿Cómo calificaría la calidad del audio? (MOS)</p>
+        <input type="number" name="preg3" min="1" max="5" required><br><br>
+
+        <p>4. ¿El video se detuvo para cargar (buffering)?</p>
+        <select name="preg4" required>
+            <option value="">--Seleccione--</option>
+            <option value="Nunca">Nunca</option>
+            <option value="1 o 2 veces">1 o 2 veces</option>
+            <option value="Varias veces">Varias veces</option>
+            <option value="Continuamente">Continuamente</option>
+        </select><br><br>
+
+        <p>5. ¿Hubo una demora notable al empezar el video?</p>
+        <select name="preg5" required>
+            <option value="">--Seleccione--</option>
+            <option value="No, comenzó enseguida">No, comenzó enseguida</option>
+            <option value="Sí, pero leve">Sí, pero leve</option>
+            <option value="Sí, fue molesta">Sí, fue molesta</option>
+            <option value="Muy larga, casi abandono">Muy larga, casi abandono</option>
+        </select><br><br>
+
+        <p>6. ¿Qué tan satisfecho está con la experiencia general? (MOS final)</p>
+        <input type="number" name="preg6" min="1" max="5" required><br><br>
+
+        <p>7. ¿Estaba conectado por cable o Wi-Fi?</p>
+        <label><input type="radio" name="preg7" value="Cable" required> Cable</label><br>
+        <label><input type="radio" name="preg7" value="Wi-Fi"> Wi-Fi</label><br><br>
+
+        <button type="submit">Enviar encuesta</button>
+    </form>
+</body>
+</html>
