@@ -58,7 +58,6 @@ def survey():
         return '¡Gracias por tu respuesta!'
     return render_template('survey.html')
 
-/* ---------------------  encuesta ------------------------ */
 
 
 app = Flask(__name__)
