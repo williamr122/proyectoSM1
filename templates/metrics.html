@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Resultados de la Encuesta QoE</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>Estadísticas de la Encuesta QoE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            color: #2c5282;
+            margin-bottom: 2rem;
+        }
+        img {
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+        }
+        h4 {
+            color: #4a5568;
+            margin-top: 2rem;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a:hover {
+            background: #3182ce;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 p-6">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-8">Resultados de la Encuesta QoE</h1>
+<body>
+    <h2>Resultados de la Encuesta QoE</h2>
 
-        {% for chart in charts %}
-        <div class="bg-white p-4 rounded shadow mb-6">
-            <img src="{{ chart }}" alt="Gráfico de resultados" class="mx-auto">
-        </div>
-        {% endfor %}
-
-        <div class="text-center mt-8">
-            <a href="/" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Volver al inicio</a>
-        </div>
+    <!-- Aquí insertamos el contenido generado desde Flask -->
+    <div>
+        {{ metric_html | safe }}
     </div>
+
+    <a href="/survey">Volver a la encuesta</a>
 </body>
 </html>

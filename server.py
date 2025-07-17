@@ -3,6 +3,9 @@ import time
 import matplotlib.pyplot as plt
 import os
 import random
+import os
+os.makedirs('static/data', exist_ok=True)
+os.makedirs('static/charts', exist_ok=True)
 
 app = Flask(__name__)
 
@@ -104,7 +107,7 @@ def metrics():
         except Exception as e:
             metric_html += f'<p>Error generando estadística para {label}: {e}</p>'
 
-    return metric_html
+    return render_template('metrics.html', metric_html=metric_html)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
