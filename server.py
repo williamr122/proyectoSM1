@@ -64,11 +64,11 @@ def metrics():
     metric_html = "<h2>Resultados de la Encuesta QoE</h2>"
     preguntas = {
         "preg1": "¿Pudo ver el video sin interrupciones?",
-        "preg2": "Calidad de imagen (MOS)",
-        "preg3": "Calidad de audio (MOS)",
+        "preg2": "Calidad de imagen",
+        "preg3": "Calidad de audio",
         "preg4": "¿Buffering?",
         "preg5": "¿Demora inicial?",
-        "preg6": "Satisfacción general (MOS)",
+        "preg6": "Satisfacción general",
         "preg7": "¿Cable o Wi-Fi?"
     }
 

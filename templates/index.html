@@ -9,24 +9,24 @@
     <style>
         /* Estilos personalizados para el cuerpo y elementos generales */
         body {
-            font-family: 'Inter', sans-serif; /* Usa la fuente Inter */
-            background-color: #f0f4f8; /* Color de fondo suave */
-            color: #333; /* Color de texto principal */
+            font-family: 'Inter', sans-serif; 
+            background-color: #f0f4f8; 
+            color: #333; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+            min-height: 100vh; 
             margin: 0;
             padding: 20px;
-            box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+            box-sizing: border-box; 
         }
         h1 {
-            color: #2c5282; /* Azul oscuro para el título */
+            color: #2c5282; 
             text-align: center;
             margin-bottom: 2rem;
-            font-size: 3rem; /* text-5xl de Tailwind */
-            font-weight: 800; /* font-extrabold de Tailwind */
+            font-size: 1.25rem; 
+            font-weight: 800; 
         }
         p {
             margin-bottom: 1.5rem;
@@ -39,43 +39,41 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem; /* Espacio entre los elementos de la lista */
+            gap: 1.5rem; 
             width: 100%;
-            max-width: 400px; /* Ancho máximo para la lista de opciones */
+            max-width: 400px; 
         }
         ul li a {
             display: block;
-            background-color: #4299e1; /* Azul vibrante para los enlaces */
+            background-color: #4299e1; 
             color: white;
             padding: 1rem 2rem;
             border-radius: 0.75rem; /* Bordes más redondeados */
             text-decoration: none;
-            font-size: 1.25rem; /* text-xl de Tailwind */
-            font-weight: 700; /* font-bold de Tailwind */
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
             text-align: center;
         }
         ul li a:hover {
-            background-color: #3182ce; /* Azul más oscuro al pasar el ratón */
-            transform: translateY(-3px); /* Efecto de elevación */
+            background-color: #3182ce; 
+            transform: translateY(-3px); 
         }
-        /* Estilos específicos para el enlace de métricas */
+        
         ul li a.metrics-link {
-            background-color: #63b3ed; /* Un azul diferente para distinguirlo */
+            background-color: #63b3ed; 
         }
         ul li a.metrics-link:hover {
             background-color: #4299e1;
         }
-        /* Estilos específicos para el enlace de video chunked */
         ul li a.chunked-video-link {
-            background-color: #48bb78; /* Un verde para el video chunked */
+            background-color: #63b3ed; 
         }
         ul li a.chunked-video-link:hover {
             background-color: #38a169;
         }
 
-        /* Ajustes responsivos para pantallas más pequeñas */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
