@@ -438,11 +438,8 @@ def metrics():
         plt.close()
         plot_html += f'<h3>7. ¿Estaba conectado por cable o Wi-Fi?</h3><img src="/static/{os.path.basename(filename)}" alt="Gráfico de tipo de conexión"><br><br>'
 
-    # Calculate overall average MOS from Question 6
     overall_avg_mos = sum(q6_data) / len(q6_data) if q6_data else 0
 
-    # Return the HTML with all generated plots
-    return f"""
     <!DOCTYPE html>
     <html lang="es">
     <head>
