@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de la Encuesta QoE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">Resultados de la Encuesta QoE</h1>
+
+        {% for chart in charts %}
+        <div class="bg-white p-4 rounded shadow mb-6">
+            <img src="{{ chart }}" alt="Gráfico de resultados" class="mx-auto">
+        </div>
+        {% endfor %}
+
+        <div class="text-center mt-8">
+            <a href="/" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>
