@@ -1,6 +1,8 @@
-from flask import Flask, send_file, Response, render_template, request
+from flask import Flask, send_file, Response, render_template, request, url_for
 import time
 import matplotlib.pyplot as plt
+import os
+import random
 
 app = Flask(__name__)
 
@@ -9,22 +11,28 @@ def index():
     return render_template('index.html')
 
 
-
-
 @app.route('/video')
 def video():
     return render_template('video.html')
 
 
+@app.route('/video_chunk_page')
+def video_chunk_page():
+    return render_template('video_chunk.html')
+
+
 @app.route('/video_chunk')
 def video_chunk():
     def generate():
-        with open("video.mp4", "rb") as f:
-            chunk = f.read(1024 * 1024)
-            while chunk:
+        filepath = os.path.join("static", "videos", "video.mp4")
+        with open(filepath, "rb") as f:
+            chunk_size = 1024 * 128  # 128 KB por chunk
+            while True:
+                chunk = f.read(chunk_size)
+                if not chunk:
+                    break
                 yield chunk
-                time.sleep(1)
-                chunk = f.read(1024 * 1024)
+                time.sleep(0.5)  # Puedes ajustar para simular buffering
     return Response(generate(), mimetype='video/mp4')
 
 
@@ -46,6 +54,7 @@ def survey():
             rf.write(f"{responses['preg6']}\n")
         return '¡Gracias por tu respuesta!'
     return render_template('survey.html')
+
 
 @app.route('/metrics')
 def metrics():
@@ -69,8 +78,7 @@ def metrics():
 
     return f'<h3>Promedio MOS: {avg_rating:.2f}</h3><img src="/static/ratings_hist.png">'
 
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5050)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
+
